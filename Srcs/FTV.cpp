@@ -1,31 +1,38 @@
 #include "../Libs/FTV.hpp"
 
 FTV::FTV(char *av){
-    std::cout << "constructor has been called" << std::endl;
+    //std::cout << "constructor has been called" << std::endl;
     this->path = av;
+    this->size = std::filesystem::file_size(this->path) * 8;
+    //std::cout << this->size << std::endl;
+    this->chunk = this->size / 8;
 }
 
 FTV::~FTV(){
-    std::cout << "destructor has been called" << std::endl;
+   // std::cout << "destructor has been called" << std::endl;
 }
 
 
 void FTV::file_manipulation(){
-    std::ifstream FTC(this->path);
+    std::ifstream FTC(this->path, std::ios::binary);
     if (FTC.is_open()){
-        this->size = std::filesystem::file_size(this->path);
-        this->output = this->path.substr(5);
+        this->output = this->path.substr(7);
         std::reverse(this->output.begin(), this->output.end());
         this->output = this->output.substr(4);
         std::reverse(this->output.begin(), this->output.end());
-        std::ofstream FT("Srcs/" + this->output + ".png");
+        std::ofstream FT("Srcs/" + this->output + ".bin", std::ios::binary);
     } else {
         std::cout << "FILE NOT READ" << std::endl;
     }
-    std::cout << "this is the size of the file in bits " << this->size * 8 << std::endl;
+    for (int i = 0; i < this->chunk; i++){
+        FTC >> this->binary;
+    }
+    std::cout << "this is the size of the file in bits " << this->size << std::endl;
 }
 
 
 void FTV::Binary_fetch(){
-    
+    std::cout << this->chunk << std::endl;
+    std::cout << "Your file will become binary" << std::endl;
+    std::cout << this->binary << std::endl;
 }

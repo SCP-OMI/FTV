@@ -3,18 +3,15 @@ CFLAGS = c++ -std=c++2a
 
 FILES = Srcs/main.cpp Srcs/FTV.cpp
 
-OBJS = $(FILES:.cpp=.o)
+# OBJS = $(FILES:.cpp=.o)
 
 all : $(NAME)
 
-$(NAME): $(OBJS) 
-	$(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME):
+	$(CFLAGS) $(FILES) -o $(NAME)
 
-%.o: %.cpp
-	@$(CFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(OBJS)
+# %.o: %.cpp
+# 	@$(CFLAGS) -c $< -o $@
 
 fclean: clean
 	rm -f $(NAME)

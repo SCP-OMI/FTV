@@ -7,9 +7,12 @@
 
 class FTV {
     private :
-        int size = 0;
+        int size;
+        int chunk;
         std::string path;
         std::string output;
+        std::string binary;
+        std::ifstream FTC;
 
     public :
         //FTV();
