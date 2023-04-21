@@ -1,7 +1,7 @@
 NAME = FTV
 CFLAGS = c++ -std=c++2a 
 
-FILES = Srcs/main.cpp
+FILES = Srcs/main.cpp Srcs/FTV.cpp
 
 OBJS = $(FILES:.cpp=.o)
 
