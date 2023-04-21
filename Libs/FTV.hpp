@@ -12,9 +12,11 @@ class FTV {
         std::string output;
 
     public :
-        FTV();
+        //FTV();
+        FTV(char *av);
         ~FTV();
         void file_manipulation();
+        void Binary_fetch();
 
 };
 
