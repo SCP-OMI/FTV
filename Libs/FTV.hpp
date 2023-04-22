@@ -4,6 +4,7 @@
 #include <iostream>
 #include <filesystem>
 #include <fstream>
+#include <bitset>
 
 class FTV {
     private :
@@ -19,7 +20,8 @@ class FTV {
         FTV(char *av);
         ~FTV();
         void file_manipulation();
-        void Binary_fetch();
+        void file_handle();
+        //std::string operator<< (std)
 
 };
 
