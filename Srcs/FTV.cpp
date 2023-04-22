@@ -20,10 +20,11 @@ void FTV::file_manipulation(){
     else
         std::cout << "FILE NOT READ" << std::endl;
     std::ofstream FT("Srcs/" + this->output, std::ios::binary);
-    for (int i = 0; i < this->size; i++){
+    for (int i = 0; i < this->chunk; i++){
         char byte;
         FTC.read(&byte, 1);
         this->binary += std::bitset<8>(byte).to_string();
+        this->binary += " ";
     }
     FT << this->binary;
     std::cout << this->binary << std::endl;
