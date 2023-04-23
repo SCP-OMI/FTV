@@ -45,17 +45,17 @@
             "childIndex": 2,
             "point": [
               -250.41,
-              3.77
+              -341.49
             ],
             "rotation": 0,
-            "bend": -6.100926255040159e-7,
+            "bend": 0,
             "handles": {
               "start": {
                 "id": "start",
                 "index": 0,
                 "point": [
                   0,
-                  2.15
+                  347.41
                 ],
                 "canBind": true
               },
@@ -63,18 +63,18 @@
                 "id": "end",
                 "index": 1,
                 "point": [
-                  257.24,
+                  234.21,
                   0
                 ],
                 "canBind": true,
-                "bindingId": "44973410-06ca-46ef-1445-342d68b6a261"
+                "bindingId": "9dd7779c-584c-43d3-2663-5b0a7f78c69e"
               },
               "bend": {
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  128.62,
-                  1.08
+                  117.11,
+                  173.71
                 ]
               }
             },
@@ -236,8 +236,8 @@
             "parentId": "page",
             "childIndex": 7,
             "point": [
-              -249.76,
-              -64.8
+              -221.32,
+              -44.26
             ],
             "rotation": 0,
             "text": " convert file \nto binary",
@@ -762,21 +762,59 @@
               0.5,
               0.5
             ]
+          },
+          "915aeac4-5ba8-47b0-35b0-f7a3332c1dad": {
+            "id": "915aeac4-5ba8-47b0-35b0-f7a3332c1dad",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "page",
+            "childIndex": 22,
+            "point": [
+              -307.98,
+              -816.8
+            ],
+            "size": [
+              789.9,
+              459.31
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "0f2b811f-01d7-40bd-189f-249ecbf47806": {
+            "id": "0f2b811f-01d7-40bd-189f-249ecbf47806",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 23,
+            "point": [
+              -290.68,
+              -797.87
+            ],
+            "rotation": 0,
+            "text": "Get the extension of the file\n      ->Decide which header is needed to append ",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1.1644738644389738,
+              "font": "script",
+              "textAlign": "start"
+            }
           }
         },
         "bindings": {
-          "44973410-06ca-46ef-1445-342d68b6a261": {
-            "id": "44973410-06ca-46ef-1445-342d68b6a261",
-            "type": "arrow",
-            "fromId": "27d321a9-289c-4a0c-2c6b-571edcd20867",
-            "toId": "82b226ff-7846-46a4-20d1-56e94518e0e8",
-            "handleId": "end",
-            "point": [
-              0.51,
-              0.39
-            ],
-            "distance": 16
-          },
           "ad48d950-52e0-46c2-31f9-d31c6e309c1d": {
             "id": "ad48d950-52e0-46c2-31f9-d31c6e309c1d",
             "type": "arrow",
@@ -834,6 +872,18 @@
             "point": [
               0.36,
               0.53
+            ],
+            "distance": 16
+          },
+          "9dd7779c-584c-43d3-2663-5b0a7f78c69e": {
+            "id": "9dd7779c-584c-43d3-2663-5b0a7f78c69e",
+            "type": "arrow",
+            "fromId": "27d321a9-289c-4a0c-2c6b-571edcd20867",
+            "toId": "915aeac4-5ba8-47b0-35b0-f7a3332c1dad",
+            "handleId": "end",
+            "point": [
+              0.58,
+              0.49
             ],
             "distance": 16
           }

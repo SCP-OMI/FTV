@@ -3,7 +3,7 @@
 FTV::FTV(char *av){
     //std::cout << "constructor has been called" << std::endl;
     this->path = av;
-    this->size = std::filesystem::file_size(this->path) * 8;
+    this->size = std::filesystem::file_size(this->path);
     //std::cout << this->size << std::endl;
     this->chunk = this->size / 8;
 }
@@ -15,20 +15,15 @@ FTV::~FTV(){
 
 void FTV::file_manipulation(){
     std::ifstream FTC(this->path, std::ios::binary);
-    if (FTC.is_open())
+    if (FTC.is_open()){
         file_handle();
+        std::cout << "File handled" << std::endl;
+    }
     else
         std::cout << "FILE NOT READ" << std::endl;
-    std::ofstream FT("Srcs/" + this->output, std::ios::binary);
-    for (int i = 0; i < this->chunk; i++){
-        char byte;
-        FTC.read(&byte, 1);
-        this->binary += std::bitset<8>(byte).to_string();
-        this->binary += " ";
-    }
-    FT << this->binary;
-   //std::cout << this->binary << std::endl;
-   // std::cout << "this is the size of the file in bits " << this->size << std::endl;
+    std::ofstream FT("Output/" + this->output + ".bin", std::ios::binary);
+    std::cout << this->size << std::endl;
+    FTC.read(this->binary.data(), this-> size);
 }
 
 
