@@ -22,8 +22,10 @@ void FTV::file_manipulation(){
     else
         std::cout << "FILE NOT READ" << std::endl;
     std::ofstream FT("Output/" + this->output + ".bin", std::ios::binary);
-    std::cout << this->size << std::endl;
     FTC.read(this->binary.data(), this-> size);
+    FT.write(this->binary.data(), this->size);
+    //std::cout << this->size << std::endl;
+    exit (0);
 }
 
 
