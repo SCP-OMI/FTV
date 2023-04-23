@@ -27,7 +27,7 @@ void FTV::file_manipulation(){
         this->binary += " ";
     }
     FT << this->binary;
-    std::cout << this->binary << std::endl;
+   //std::cout << this->binary << std::endl;
    // std::cout << "this is the size of the file in bits " << this->size << std::endl;
 }
 
